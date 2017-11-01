@@ -25,22 +25,24 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-from .mbcharsetprober import MultiByteCharSetProber
-from .codingstatemachine import CodingStateMachine
 from .chardistribution import EUCKRDistributionAnalysis
-from .mbcssm import EUCKR_SM_MODEL
+from .codingstatemachine import CodingStateMachine
+from .mbcharsetprober import MultiByteCharSetProber
+from .mbcssm import CP949_SM_MODEL
 
 
-class EUCKRProber(MultiByteCharSetProber):
+class CP949Prober(MultiByteCharSetProber):
     def __init__(self):
-        super(EUCKRProber, self).__init__()
-        self.coding_sm = CodingStateMachine(EUCKR_SM_MODEL)
+        super(CP949Prober, self).__init__()
+        self.coding_sm = CodingStateMachine(CP949_SM_MODEL)
+        # NOTE: CP949 is a superset of EUC-KR, so the distribution should be
+        #       not different.
         self.distribution_analyzer = EUCKRDistributionAnalysis()
         self.reset()
 
     @property
     def charset_name(self):
-        return "EUC-KR"
+        return "CP949"
 
     @property
     def language(self):

@@ -25,3 +25,9 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+# unused files from chardet repo
+lib/MANIFEST.in
+lib/docs
+lib/test*
+lib/setup.*
