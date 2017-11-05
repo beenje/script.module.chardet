@@ -9,8 +9,8 @@
   <extension point="xbmc.python.module"
              library="lib" />
   <extension point="xbmc.addon.metadata">
-    <summary>Universal encoding detector</summary>
-    <description>Packed for Kodi from https://github.com/chardet/chardet</description>
+    <summary lang="en_GB">Universal encoding detector</summary>
+    <description lang="en_GB">Packed for Kodi from https://github.com/chardet/chardet</description>
     <license>LGPL</license>
     <platform>all</platform>
     <language></language>
